@@ -17,8 +17,8 @@ class TightBindingAcceptorIsland(TightBinding):
     Terms (minimal version):
       1) NN hopping: sum_<ij> c†_i  T(dir_ij)  c_j
          where T(dir) is a 4x4 matrix depending on bond orientation.
-         You provide 3 matrices corresponding to the three honeycomb NN directions:
-            T0   : "0 degrees" (your quantisation-direction hopping)
+        Provided 3 matrices corresponding to the three honeycomb NN directions:
+            T0   : "0 degrees" (quantisation-direction hopping)
             T120 : +120 degrees
             Tm120: -120 degrees
 

@@ -26,7 +26,6 @@ class TightBindingKMIsland(TightBinding):
         self.U = None
         self.band_structure_data = None
 
-        # If you later add these to ModelOptions, getattr will pick them up.
         self.t = getattr(model_options, "t", -1.0)
         self.lam_so = getattr(model_options, "lam_so", 0.1)
         self.mass = getattr(model_options, "mass", 0.0)
