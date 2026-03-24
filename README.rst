@@ -1,34 +1,6 @@
-
----
-
-## How to Use
-
-1. Install standard scientific Python packages:
-   - numpy
-   - scipy
-   - matplotlib
-   - jupyter
-
-2. Run notebooks in order:
-   - `0d_island_setup.ipynb` → builds geometry
-   - `0d_LDOS.ipynb` → NN analysis
-   - `0dkm_LDOS.ipynb` → KM analysis
-   - `0d_acceptor_LDOS.ipynb` → acceptor analysis
-   - `0d_plots.ipynb` → final figures
-
-All analysis is self-contained within the repository.
-
----
-
 ## Acknowledgements and Code Provenance
 
-This repository builds on an existing tight-binding framework developed in part by Javier Larrain Garcia-Perate and collaborators.
-
-Within the `topological_insulator` module, the following core files are derived from this prior framework:
-
-- `base_tb.py`
-- `bulk_tb.py`
-- `edge_tb.py`
+This repository builds on an existing tight-binding framework developed by Javier Larrain Garcia-Perate and other LCN collaborators.
 
 All other files in this repository were developed or modified as part of this MSci dissertation project, including:
 
@@ -62,10 +34,28 @@ The full repository is included to ensure that the codebase is self-contained an
 
 ---
 
-## Notes
+## Notes
 
 - All results correspond to finite (0D) island geometries with open boundaries.
 - The analysis is designed to be directly comparable to STM-style LDOS measurements.
 - The repository reflects the final state of the dissertation code and figures.
 
 ---
+
+## How to Use
+
+1. Install standard scientific Python packages:
+   - numpy
+   - scipy
+   - matplotlib
+   - jupyter
+
+2. Run notebooks in order:
+   - `0d_island_setup.ipynb` → builds geometry
+   - `0d_LDOS.ipynb` → NN analysis
+   - `0dkm_LDOS.ipynb` → KM analysis
+   - `0d_acceptor_LDOS.ipynb` → acceptor analysis
+   - `0d_plots.ipynb` → final figures
+
+All analysis is self-contained within the repository.
+
