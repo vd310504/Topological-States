@@ -1,22 +1,71 @@
-Topological Insulator
-------------
 
-Tight-Binding approximation, for 2D structures, which includes **nearest neighbour hopping**, **spin orbit coupling** and **mean-field interaction** Hamiltonian terms. 
-As well as featuring the ability to compute the Chern invariant, Z2 invariant and (L)DOS. Examples are provided within the repository.
+---
 
-Installation
-------------
+## How to Use
 
-To use the library in a Linux environment, simply install it using pip:
+1. Install standard scientific Python packages:
+   - numpy
+   - scipy
+   - matplotlib
+   - jupyter
 
-.. code-block:: console
+2. Run notebooks in order:
+   - `0d_island_setup.ipynb` → builds geometry
+   - `0d_LDOS.ipynb` → NN analysis
+   - `0dkm_LDOS.ipynb` → KM analysis
+   - `0d_acceptor_LDOS.ipynb` → acceptor analysis
+   - `0d_plots.ipynb` → final figures
 
-   $ git clone https://github.com/JaviLGPKE/topological_insulator.git
-   $ cd topological_insulator
-   $ pip install -e .
+All analysis is self-contained within the repository.
 
-.. If your *PYTHONPATH* doesn't contains pybind11, you should add it:
+---
 
-.. .. code-block:: console
+## Acknowledgements and Code Provenance
 
-..    $ export pybind11_DIR=$(python3 -c "import pybind11; print(pybind11.get_cmake_dir())")
+This repository builds on an existing tight-binding framework developed in part by Javier Larrain Garcia-Perate and collaborators.
+
+Within the `topological_insulator` module, the following core files are derived from this prior framework:
+
+- `base_tb.py`
+- `bulk_tb.py`
+- `edge_tb.py`
+
+All other files in this repository were developed or modified as part of this MSci dissertation project, including:
+
+### Notebooks
+- `0d_LDOS.ipynb`
+- `0d_LDOSold.ipynb`
+- `0d_acceptor_LDOS.ipynb`
+- `0d_island.ipynb`
+- `0d_island_setup.ipynb`
+- `0d_plots.ipynb`
+- `0dkm_LDOS.ipynb`
+- `0dkm_island.ipynb`
+
+### Tight-binding and model implementations
+- `island_tb.py`
+- `islandkm_tb.py`
+- `island_acceptor_tb.py`
+
+### Geometry and supporting code
+- `geometry.py`
+- all supporting modules within `cell_parser/`, `geometry/`, and `topological_invariants/` (adapted and extended where required for this project)
+
+These components implement the full real-space LDOS analysis pipeline developed in this work, including:
+
+- finite island construction  
+- vacancy modelling (bulk, edge, and positional sweeps)  
+- LDOS computation and projection  
+- peak attribution and eigenstate analysis  
+
+The full repository is included to ensure that the codebase is self-contained and fully reproducible, so that all notebooks and analysis workflows can be executed without requiring any additional files beyond standard Python dependencies.
+
+---
+
+## Notes
+
+- All results correspond to finite (0D) island geometries with open boundaries.
+- The analysis is designed to be directly comparable to STM-style LDOS measurements.
+- The repository reflects the final state of the dissertation code and figures.
+
+---
