@@ -1,4 +1,5 @@
-Real-Space Topological States in Finite Honeycomb Islands
+Real-Space Probing of Topological States
+in Finite Atomically Engineered Islands
 ========================================================
 
 This repository contains the full codebase and analysis developed for my MSci Physics dissertation at University College London.
