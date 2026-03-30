@@ -48,9 +48,6 @@ Core source code (src/topological_insulator/python/)::
     geometry/geometry.py
     cell_parser/
     hamiltonian/tight_binding/
-        base_tb.py
-        bulk_tb.py
-        edge_tb.py
         island_tb.py
         islandkm_tb.py
         island_acceptor_tb.py
